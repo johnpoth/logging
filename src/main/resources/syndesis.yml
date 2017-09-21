@@ -1,0 +1,10 @@
+---
+flows:
+- steps:
+  - kind: endpoint
+    uri: periodic-timer:every?period=500
+  - kind: log
+    message: Hello WORLDS
+    loggingLevel: INFO
+  - kind: endpoint
+    uri: http-get-connector?httpUri=www.google.com
